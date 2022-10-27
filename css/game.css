@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Creepster", cursive, sans-serif;
+    background-color: rgba(48, 0, 48, 0.8);
+    background-image: url(../assets/images/bg-texture.png);
+}
+
+body {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px;
+    font-size: 1.2em;
+    width: 100%;
+    margin-left: 5px;
+    color: #b3f6ff;
+    margin-bottom: 4px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    max-width: 1400px;
+    gap: 5px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    aspect-ratio: 3/3.8;
+    width: 100%;
+    background-color: #7d1818;
+    position: relative;
+    transition: all 600ms ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #b3f6ff;
+    border-radius: 8px;
+    transition: all 600ms ease;
+}
+
+.front {
+    transform: rotateY(180deg);
+}
+
+.back {
+    background-image: url("../assets/images/keeperBackCard.png");
+    backface-visibility: hidden;
+}
+
+.reveal__card {
+    transform: rotateY(180deg);
+}
+
+.disable__card {
+    filter: saturate(0);
+    opacity: 0.5;
+}
+
+footer {
+    text-align: center;
+    justify-content: center;
+    color: #b3f6ff;
+    margin-top: 4px;
+}
+
+.restart__game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.final__image {
+    height: 75%;
+    margin-top: 70px;
+    background-size: cover;
+    background-position: center;
+}
